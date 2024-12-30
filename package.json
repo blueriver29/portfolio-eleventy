@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/switowski/portfolio.git"
+    "url": "git://github.com/bluebentley/portfolio-eleventy.git"
   },
   "keywords": [
     "tailwind",
@@ -28,7 +28,7 @@
   ],
   "author": "Sebastian Witowski",
   "license": "CC-BY-NC-SA-4.0",
-  "homepage": "https://switowski.com",
+  "homepage": "https://bluebentley/portfolio-eleventy.com",
   "dependencies": {
     "alpinejs": "^3.1.0",
     "eleventy-plugin-time-to-read": "^1.2.0",
