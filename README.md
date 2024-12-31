@@ -1,8 +1,8 @@
 # switowski.com
 
-This is the personal website of Sebastian Witowski ([switowski.com](https://switowski.com)).
+This is the   personal website of Sebastian Witowski ([switowski.com](https://switowski.com)).
 
-It's built using [Eleventy](https://www.11ty.dev/), [TailwindCSS](https://tailwindcss.com/), and [Alpine.js](https://alpinejs.dev/).
+It's built  git using [Eleventy](https://www.11ty.dev/), [TailwindCSS](https://tailwindcss.com/), and [Alpine.js](https://alpinejs.dev/).
 
 ## About
 
