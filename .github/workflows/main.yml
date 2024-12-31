@@ -1,0 +1,77 @@
+
+
+Steps to Deploy:
+
+1. Ensure Build Output Directory is Correct:
+
+By default, 11ty generates the site in the _site folder. This needs to match GitHub Pages' expected output directory.
+
+
+
+2. Update GitHub Pages Settings:
+
+Go to your repository's Settings > Pages.
+
+Under "Build and deployment," set the source to GitHub Actions. This is because 11ty requires a build step.
+
+
+
+3. Create a GitHub Actions Workflow:
+
+In your repository, create the following file: .github/workflows/deploy.yml.
+
+Add the following content:
+
+name: Deploy 11ty to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the site
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+
+
+
+4. Commit and Push the Changes:
+
+Add and commit the deploy.yml file to your main branch:
+
+git add .github/workflows/deploy.yml
+git commit -m "Add GitHub Actions workflow for deploying to Pages"
+git push
+
+
+
+5. Verify Deployment:
+
+After pushing, GitHub Actions will run the workflow to build and deploy your site.
+
+Your site should be live at https://yunivera.github.io/portfolio-eleventy/ (or your custom domain if configured).
+
+
+
+
